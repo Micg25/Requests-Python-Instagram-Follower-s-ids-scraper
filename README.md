@@ -1,5 +1,6 @@
 # Requests-Python-Instagram-Follower-s-ids-scraper
 instagram Followers' IDs scraper bot made with python-requests 
+
 ITALIAN:
 Spieghiamo due cose, il file "Standard-Requests IDs scraper for instagram" è la versione più a basso livello per fare scraping di follower da un profilo di instagram,
 essa molto semplicemente fa richieste all'endpoint api del profilo stesso aggiornando il max_id (ovvero il valore dell'id massimo dalla quale dovrà cominciare il fetch successivo, ovvero la chiamata api successiva), il max id nel caso del codice "Standard" viene preso direttamente dai valori di risposta alla richiesta, ovvero nel json. Facendo però le chiamate in modo "normale" ho notato che non vengono presi tutti i follower di un profilo ma ne vengono saltati un numero variabile, ad esempio ho provato a fare scraping da un profilo con 389 follower, ne venivano fetchati in totale solo 340, ma a volte 339 o anche meno. Insomma, un numero variabile, ho notato che questo accadeva probabilmente perchè in chiamate differenti alcuni follower venivano ripetuti (anche qui non so il perchè). 
@@ -9,6 +10,8 @@ Cosi cambiando il codice sono riuscito a prendere più follower possibili da un 
 Pacchetti necessari per avviare il codice: pip install requests
 
 PS. Per fare funzionare il codice fare attenzione ad assegnare i vostri valori personali alle variabili contrassegnate con i commenti.
+
+
 
 ENGLISH:
 The file "Standard-Requests IDs scraper for Instagram" is the lower-level version used for scraping followers from an Instagram profile. It simply makes requests to the profile's API endpoint, updating the max_id (the maximum ID value from which the next fetch should start, i.e., the next API call). In the "Standard" code, the max_id is taken directly from the values in the API response JSON. However, when making requests in a "normal" manner, I noticed that not all followers from a profile were fetched; a variable number were skipped. For example, when trying to scrape a profile with 389 followers, only 340 were fetched in total—sometimes 339 or even fewer. The number varied.
